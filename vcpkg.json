@@ -1,0 +1,8 @@
+{
+    "name": "opengl-beginner",
+    "version-string": "0.1.0",
+    "dependencies": [
+      "glad",
+      "grpc"
+    ]
+  }

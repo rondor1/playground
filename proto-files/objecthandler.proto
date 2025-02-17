@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.objecthandler";
+option java_outer_classname = "ObjectHandlerProto";
+option objc_class_prefix = "OBH";
+
+package objecthandler;
+
+// The greeting service definition.
+service ObjectHandlerService {
+  rpc GetObject(ObjectName) returns (Object) {}
+
+  rpc SetPosition(Object) returns (Position) {}
+}
+
+message ObjectName { string name = 1; }
+
+message Position {
+  int32 x = 1;
+  int32 y = 2;
+  int32 z = 3;
+}
+
+message Object {
+  ObjectName name = 1;
+  Position position = 2;
+}
